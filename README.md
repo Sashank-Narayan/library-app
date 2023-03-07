@@ -1,5 +1,5 @@
-DESCRIPTION
-
+**DESCRIPTION
+**
 This Repository designs a Books library app using the Open Library Subjects and Search APIs
 
 # Getting Started with Create React App
