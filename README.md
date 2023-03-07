@@ -1,3 +1,7 @@
+DESCRIPTION
+
+This Repository designs a Books library app using the Open Library Subjects and Search APIs
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
