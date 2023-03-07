@@ -31,13 +31,13 @@ export default class Paginator extends React.Component {
             className={currentPage === 1 ? "disabled pager" : "pager"}
             onClick={this.onFirst}
           >
-            First
+            <button disabled={currentPage === 1}>First</button>
           </li>
           <li
             className={currentPage === 1 ? "disabled pager" : "pager"}
             onClick={this.onPrevious}
           >
-            Previous
+            <button disabled= {currentPage === 1}>Previous</button>
           </li>
           <li
             className="btn-dark pager"
@@ -51,7 +51,7 @@ export default class Paginator extends React.Component {
             }
             onClick={this.onNext}
           >
-            Next
+            <button disabled={currentPage * pageSize > totalCount}>Next</button>
           </li>
           <li
             className={
@@ -59,7 +59,7 @@ export default class Paginator extends React.Component {
             }
             onClick={this.onLast}
           >
-            Last
+            <button disabled={currentPage * pageSize > totalCount}>Last</button>
           </li>
         </ul>
       </React.Fragment>

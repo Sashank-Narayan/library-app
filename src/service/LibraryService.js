@@ -1,6 +1,6 @@
 import React from "react";
 import { API_BASE_URL } from "../Constant";
-import http from "./Ajax"
+import http from "./API"
 
 export default class LibraryService extends React.Component{
 
