@@ -4,6 +4,7 @@ import Spinner from "../widgets/Spinner";
 import { BooksFilter } from "./BooksFilter";
 import BookTableHeader from "./BookTableHeader";
 import BookTableView from "./BookTableView";
+import SubjectList from "./SubjectList";
 
 export default class BookSearchView extends React.Component{
 
@@ -64,16 +65,10 @@ export default class BookSearchView extends React.Component{
         return(
                   <div>
                     <div>
-                        <div className="col-md-3">
+                        <div className="col-md-5">
                             <h3>{!this.props.subjectQuery ? "Trending Subjects" : subjectName}</h3>
                             {!this.props.subjectQuery && 
-                              <ul>
-                              <li><a href="/science">Science</a></li>
-                              <li><a href="/javascript">Javascript</a></li>
-                              <li><a href="/programming">Programming</a></li>
-                              <li><a href="/finance">Finance</a></li>
-                              <li><a href="/horror">Horror</a></li>
-                            </ul>
+                                <SubjectList/>
                             }
                         </div>
                       <div className="row">

@@ -4,10 +4,10 @@ export default function BookTableHeader({ from }){
   return (
     <thead className="thead-dark">
       <tr>
-        <th scope="col">Book Name</th>
+        <th scope="col">Title And Sub Title</th>
         <th scope="col">Author</th>
-        <th scope="col">First Publish Date</th>
-        <th scope="col">Last Publish Date</th>
+        <th scope="col">First Publish Year</th>
+        <th scope="col">Latest Publish Year</th>
       </tr>
     </thead>
   );
