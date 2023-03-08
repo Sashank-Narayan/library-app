@@ -24,8 +24,8 @@ export class BookSelector extends React.Component {
           onChange={(e) => this.setState({ query: e.target.value })}
         />
         <br/>
-        <button onClick={() => this.props.onChangequery(query)}>Search</button>
-        <button onClick={() => this.clearQuery()}>Clear</button>
+        <button type="button" class="btn btn-outline-primary" onClick={() => this.props.onChangequery(query)}>Search</button>
+        <button type="button" class="btn btn-outline-primary" onClick={() => this.clearQuery()}>Clear</button>
       </React.Fragment>
     );
   }

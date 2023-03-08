@@ -9,7 +9,8 @@ export default class SubjectSearchContainer extends React.Component{
         this.state = {
             filteredBooks : [],
             totalCount: 0,
-            query: window.location.pathname.split('/')
+            pageSize : 10,
+            query: window.location.pathname.split('/')[1]
         }
         console.log(this.state.query)
     }

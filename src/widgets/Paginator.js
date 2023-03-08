@@ -29,15 +29,14 @@ export default class Paginator extends React.Component {
         <ul className="pagination">
           <li
             className={currentPage === 1 ? "disabled pager" : "pager"}
-            onClick={this.onFirst}
           >
-            <button disabled={currentPage === 1}>First</button>
+            <button disabled={currentPage === 1} type="button" class="btn btn-outline-dark" onClick={this.onFirst}>First</button>
           </li>
           <li
             className={currentPage === 1 ? "disabled pager" : "pager"}
-            onClick={this.onPrevious}
+            
           >
-            <button disabled= {currentPage === 1}>Previous</button>
+            <button disabled={currentPage <= 1} type="button" class="btn btn-outline-dark" onClick={this.onPrevious}>Previous</button>
           </li>
           <li
             className="btn-dark pager"
@@ -49,17 +48,15 @@ export default class Paginator extends React.Component {
             className={
               currentPage * pageSize > totalCount ? "disabled pager" : "pager"
             }
-            onClick={this.onNext}
           >
-            <button disabled={currentPage * pageSize > totalCount}>Next</button>
+            <button disabled={currentPage * pageSize > totalCount} type="button" class="btn btn-outline-dark" onClick={this.onNext}>Next</button>
           </li>
           <li
             className={
               currentPage * pageSize > totalCount ? "disabled pager" : "pager"
             }
-            onClick={this.onLast}
           >
-            <button disabled={currentPage * pageSize > totalCount}>Last</button>
+            <button disabled={currentPage * pageSize > totalCount} type="button" class="btn btn-outline-dark" onClick={this.onLast}>Last</button>
           </li>
         </ul>
       </React.Fragment>

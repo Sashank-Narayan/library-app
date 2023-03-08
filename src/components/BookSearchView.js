@@ -74,7 +74,7 @@ export default class BookSearchView extends React.Component{
                       <div className="row">
                         
                         <div className="col-md-12 mt-3 pb-3">
-                          {!this.props.subjectQuery && <button onClick={this.loadSearchBooksByAuthor}>Filter By Author</button>}
+                          {!this.props.subjectQuery && <button  type="button" class="btn btn-outline-primary" onClick={this.loadSearchBooksByAuthor}>Filter By Author</button>}
                           <BooksFilter
                             query={this.state.query}
                             onChangequery={this.onChangequery}
