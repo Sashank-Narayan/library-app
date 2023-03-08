@@ -10,9 +10,8 @@ export default class SubjectSearchContainer extends React.Component{
             filteredBooks : [],
             totalCount: 0,
             pageSize : 10,
-            query: window.location.pathname.split('/')[1]
+            query: this.props.location.pathname.split('/')[1]
         }
-        console.log(this.state.query)
     }
 
     getTotalCountOfBooks = () => {
@@ -44,6 +43,7 @@ export default class SubjectSearchContainer extends React.Component{
 
     render(){
         let {filteredBooks, totalCount, loading} = this.state
+
         return(
             <>
             <BookSearchView
@@ -53,6 +53,7 @@ export default class SubjectSearchContainer extends React.Component{
                 getTotalCount={this.getTotalCountOfBooks}
                 loadBooks={this.loadBooks}
                 subjectQuery = {true}
+                subjectName = {this.state.query} 
             />
             </>
         )

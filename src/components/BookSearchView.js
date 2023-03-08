@@ -59,14 +59,12 @@ export default class BookSearchView extends React.Component{
 
         let { pageSize, currentPage } = this.state;
         let { filteredBooks = [], totalCount, loading } = this.props;
-        let subjectName = window.location.pathname.split('/')[1].toUpperCase()
-
 
         return(
                   <div>
                     <div>
                         <div className="col-md-5">
-                            <h3>{!this.props.subjectQuery ? "Trending Subjects" : subjectName}</h3>
+                            <h3>{!this.props.subjectQuery ? "Trending Subjects" : this.props.subjectName.toUpperCase()}</h3>
                             {!this.props.subjectQuery && 
                                 <SubjectList/>
                             }
