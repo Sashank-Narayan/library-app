@@ -2,23 +2,31 @@ import StorageService from "./StorageService";
 
 function modifyData(data) {
   let books = [];
-  console.log(data['docs'])
-  if(data['docs']){
-    data['docs'].forEach(book => {
-      if(book.title && book['author_name'] && book.first_publish_year && book.publish_year)
-        books.push({ title: book.title, author: book['author_name'][0], firstPublishedDate: book.first_publish_year, lastPublishedDate: Math.max(...(book.publish_year)) })
+  console.log(data["docs"]);
+  if (data["docs"]) {
+    data["docs"].forEach((book) => {
+      if (book.title && book["author_name"])
+        books.push({
+          title: book.title,
+          author: book["author_name"][0],
+          firstPublishedDate: book.first_publish_year || 1999,
+          lastPublishedDate: Math.max(...book.publish_year, 0),
+        });
     });
-  }
-  
-  else{
-    console.log(data['works'])
-    if(data['works']){
-      data['works'].forEach(book => {
-        books.push({ title: book.title, author: book['authors'][0].name, firstPublishedDate: book.first_publish_year, lastPublishedDate: book.first_publish_year })
+  } else {
+    console.log(data["works"]);
+    if (data["works"]) {
+      data["works"].forEach((book) => {
+        books.push({
+          title: book.title,
+          author: book["authors"][0].name,
+          firstPublishedDate: book.first_publish_year,
+          lastPublishedDate: book.first_publish_year,
+        });
       });
     }
   }
-
+  console.log(books);
   return { success: true, books, count: data.num_found };
 }
 

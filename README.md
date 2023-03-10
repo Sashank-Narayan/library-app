@@ -4,27 +4,27 @@ This Repository designs a Books library app using the Open Library Subjects and 
 
 FEATURES
 
-FILTER BOOKS 
-    Search the books from the library by Title or Author Name ( Further to just Author Name Seperately)
+FILTER BOOKS
+Search the books from the library by Title or Author Name ( Further to just Author Name Seperately)
 
 FILTER BOOKS BY SUBJECT
-    List of top 5 subjects with routing to a new subject detail page to view the books of the subject
+List of top 5 subjects with routing to a new subject detail page to view the books of the subject
 
 PAGINATION
-    Seperate the limit of each search of books via page and provide toggling to next and previous pages. ( Further to Page Number specified)
+Seperate the limit of each search of books via page and provide toggling to next and previous pages. ( Further to Page Number specified)
 
-CACHED API 
-    All the API calls are cached on the local storage
+CACHED API
+All the API calls are cached on the local storage
 
 ROUTING
-    Route of default home page and subject details page with the path of the URL to any subject retrieves the books related
+Route of default home page and subject details page with the path of the URL to any subject retrieves the books related
 
 LOADER
-    When a API call is in progress
+When a API call is in progress
 
 EXPERIMENTAL API
-    Search API doc - [https://openlibrary.org/dev/docs/api/search]
-    Subjects API doc - [https://openlibrary.org/dev/docs/api/subjects]
+Search API doc - [https://openlibrary.org/dev/docs/api/search]
+Subjects API doc - [https://openlibrary.org/dev/docs/api/subjects]
 
 # Getting Started with Create React App
 

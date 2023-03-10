@@ -6,12 +6,9 @@ export class BooksFilter extends React.Component {
     let { query } = this.props;
     return (
       <div
-        className="d-flex justify-content-between sidebar sidebar--style-4 z-depth-1-top"
-        style={{ padding: "1rem" }}
+        style={{ borderBottom: "1px solid black", padding: 25, width: "85vw" }}
       >
-        <div className="col-md-2">
-          <BookSelector query={query} onChangequery={this.props.onChangequery} />
-        </div>
+        <BookSelector query={query} onChangequery={this.props.onChangequery} />
       </div>
     );
   }

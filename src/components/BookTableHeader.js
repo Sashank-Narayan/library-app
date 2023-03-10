@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BookTableHeader({ from }){
+export default function BookTableHeader({ from }) {
   return (
     <thead className="thead-dark">
       <tr>
@@ -11,4 +11,4 @@ export default function BookTableHeader({ from }){
       </tr>
     </thead>
   );
-};
+}

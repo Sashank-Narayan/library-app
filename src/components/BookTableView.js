@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BookTableView({ book }){
+export default function BookTableView({ book }) {
   return (
     <tr>
       <td>{book.title}</td>
@@ -9,4 +9,4 @@ export default function BookTableView({ book }){
       <td>{book.lastPublishedDate}</td>
     </tr>
   );
-};
+}

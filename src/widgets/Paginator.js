@@ -27,16 +27,25 @@ export default class Paginator extends React.Component {
     return (
       <React.Fragment>
         <ul className="pagination">
-          <li
-            className={currentPage === 1 ? "disabled pager" : "pager"}
-          >
-            <button disabled={currentPage === 1} type="button" class="btn btn-outline-dark" onClick={this.onFirst}>First</button>
+          <li className={currentPage === 1 ? "disabled pager" : "pager"}>
+            <button
+              disabled={currentPage === 1}
+              type="button"
+              class="btn btn-outline-dark"
+              onClick={this.onFirst}
+            >
+              First
+            </button>
           </li>
-          <li
-            className={currentPage === 1 ? "disabled pager" : "pager"}
-            
-          >
-            <button disabled={currentPage <= 1} type="button" class="btn btn-outline-dark" onClick={this.onPrevious}>Previous</button>
+          <li className={currentPage === 1 ? "disabled pager" : "pager"}>
+            <button
+              disabled={currentPage <= 1}
+              type="button"
+              class="btn btn-outline-dark"
+              onClick={this.onPrevious}
+            >
+              Previous
+            </button>
           </li>
           <li
             className="btn-dark pager"
@@ -49,14 +58,28 @@ export default class Paginator extends React.Component {
               currentPage * pageSize > totalCount ? "disabled pager" : "pager"
             }
           >
-            <button disabled={currentPage * pageSize > totalCount} type="button" class="btn btn-outline-dark" onClick={this.onNext}>Next</button>
+            <button
+              disabled={currentPage * pageSize > totalCount}
+              type="button"
+              class="btn btn-outline-dark"
+              onClick={this.onNext}
+            >
+              Next
+            </button>
           </li>
           <li
             className={
               currentPage * pageSize > totalCount ? "disabled pager" : "pager"
             }
           >
-            <button disabled={currentPage * pageSize > totalCount} type="button" class="btn btn-outline-dark" onClick={this.onLast}>Last</button>
+            <button
+              disabled={currentPage * pageSize > totalCount}
+              type="button"
+              class="btn btn-outline-dark"
+              onClick={this.onLast}
+            >
+              Last
+            </button>
           </li>
         </ul>
       </React.Fragment>
