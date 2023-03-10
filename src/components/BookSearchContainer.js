@@ -43,7 +43,7 @@ export default class BookSearchContainer extends React.Component {
       <>
         <div style={{ display: "flex", height: "100vh" }}>
           <div className="p-2" style={{ borderRight: "1px solid black" }}>
-            <h5 style={{ textDecoration: "underline" }}>
+            <h5 style={{ fontWeight: "bold" }}>
               {!this.props.subjectQuery
                 ? "Trending Subjects"
                 : this.props.subjectName.toUpperCase()}

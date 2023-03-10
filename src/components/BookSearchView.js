@@ -122,7 +122,6 @@ export default class BookSearchView extends React.Component {
                     </tbody>
                   </table>
                 )}
-                {from && from != "subjects" && (
                   <div
                     className="d-flex"
                     style={{ justifyContent: "space-evenly" }}
@@ -136,7 +135,6 @@ export default class BookSearchView extends React.Component {
                       />
                     </div>
                   </div>
-                )}
               </div>
             </div>
           )}

@@ -5,7 +5,7 @@ function modifyData(data) {
   console.log(data["docs"]);
   if (data["docs"]) {
     data["docs"].forEach((book) => {
-      if (book.title && book["author_name"])
+      if (book.title && book["author_name"] && book.publish_year)
         books.push({
           title: book.title,
           author: book["author_name"][0],
